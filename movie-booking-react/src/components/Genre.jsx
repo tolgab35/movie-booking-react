@@ -1,21 +1,4 @@
-import { useState, useEffect } from "react";
-import { moviesService } from "../services/moviesService";
-
-export const Genre = () => {
-  const [genres, setGenres] = useState([]);
-
-  useEffect(() => {
-    const fetchGenres = async () => {
-      try {
-        const data = await moviesService.getGenres();
-        setGenres(data);
-      } catch (error) {
-        console.error("Error fetching genres:", error);
-      }
-    };
-    fetchGenres();
-  }, []);
-
+export const Genre = ({ genres }) => {
   return (
     <div>
       <ul>
