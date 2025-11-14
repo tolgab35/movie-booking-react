@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { moviesService } from "../services/moviesService";
 import { Genre } from "../components/Genre";
 import { MoviesGrid } from "../components/MoviesGrid";
+import { Navbar } from "../components/Navbar";
 
 export const Home = () => {
   const [genres, setGenres] = useState([]);
@@ -25,7 +26,8 @@ export const Home = () => {
 
   return (
     <>
-      <Genre genres={genres} />
+      <Navbar />
+      {/* <Genre genres={genres} /> */}
       <MoviesGrid movies={movies} />
     </>
   );
