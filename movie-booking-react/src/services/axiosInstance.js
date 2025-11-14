@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "https://api.themoviedb.org/3/genre/movie/list",
+  baseURL: import.meta.env.VITE_TMDB_API_BASE_URL,
   params: {
     api_key: import.meta.env.VITE_TMDB_API_KEY,
     language: "en-US",
