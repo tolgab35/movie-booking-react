@@ -28,7 +28,7 @@ export const Home = () => {
     <>
       <Navbar />
       {/* <Genre genres={genres} /> */}
-      <MoviesGrid movies={movies} />
+      <MoviesGrid movies={movies} genres={genres} />
     </>
   );
 };
