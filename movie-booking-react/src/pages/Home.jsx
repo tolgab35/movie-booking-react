@@ -1,6 +1,11 @@
-import React from "react";
 import { Genre } from "../components/Genre";
+import { MoviesGrid } from "../components/MoviesGrid";
 
 export const Home = () => {
-  return <Genre />;
+  return (
+    <>
+      <Genre />
+      <MoviesGrid />
+    </>
+  );
 };

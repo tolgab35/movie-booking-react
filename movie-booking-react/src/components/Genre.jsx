@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { moviesService } from "../services/moviesService";
 
 export const Genre = () => {
