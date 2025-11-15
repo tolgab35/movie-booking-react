@@ -27,10 +27,8 @@ export const Home = () => {
 
   return (
     <>
-      <Navbar />
       {/* <Genre genres={genres} /> */}
       <MoviesGrid movies={movies} genres={genres} />
-      <Footer />
     </>
   );
 };

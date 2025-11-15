@@ -9,4 +9,8 @@ export const moviesService = {
     const res = await api.get("/movie/popular");
     return res.data.results;
   },
+  getMovieDetails: async (id) => {
+    const res = await api.get(`/movie/${id}`);
+    return res.data;
+  },
 };

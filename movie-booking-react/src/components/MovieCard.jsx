@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export const MovieCard = ({ movie, genres }) => {
+  const navigate = useNavigate();
   const imageUrl = movie.poster_path
     ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
     : null;
@@ -15,7 +18,10 @@ export const MovieCard = ({ movie, genres }) => {
     : [];
 
   return (
-    <div className="max-w-[280px] flex flex-col items-center group cursor-pointer">
+    <div
+      onClick={() => navigate(`/movie/${movie.id}`)}
+      className="max-w-[280px] flex flex-col items-center group cursor-pointer"
+    >
       {imageUrl && (
         <div className="relative w-full overflow-hidden rounded-md">
           <img
