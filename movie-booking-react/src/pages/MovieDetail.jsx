@@ -15,9 +15,9 @@ export const MovieDetail = () => {
   if (!movie) return <div>Loading...</div>;
 
   return (
-    <div className="flex flex-col items-center max-w-7xl mx-auto px-8 py-4">
+    <div className="max-w-7xl mx-auto px-8 py-10">
       {/* Poster + info */}
-      <div className="flex gap-8">
+      <div className="flex gap-10">
         {/* Poster */}
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -27,11 +27,12 @@ export const MovieDetail = () => {
 
         {/* Info */}
         <div className="flex flex-col gap-3">
-          <h1 className="text-3xl font-bold">{movie.title}</h1>
-
-          <div className="text-gray-400 flex gap-4">
-            <span>{movie.release_date?.slice(0, 4)}</span>
-            <span>⭐ {movie.vote_average.toFixed(1)}</span>
+          <div>
+            <h1 className="text-4xl font-bold mb-1">{movie.title}</h1>
+            <p className="text-gray-400 text-sm">
+              {movie.release_date?.slice(0, 4)} • ⭐{" "}
+              {movie.vote_average.toFixed(1)}
+            </p>
           </div>
 
           <p className="text-gray-300 leading-relaxed max-w-lg">
