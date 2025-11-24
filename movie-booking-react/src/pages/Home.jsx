@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { moviesService } from "../services/moviesService";
 import { Genre } from "../components/Genre";
 import { MoviesGrid } from "../components/MoviesGrid";
-import { Navbar } from "../components/Navbar";
-import { Footer } from "../components/Footer";
 
 export const Home = () => {
   const [genres, setGenres] = useState([]);

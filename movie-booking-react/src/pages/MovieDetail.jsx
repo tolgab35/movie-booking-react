@@ -1,8 +1,6 @@
 import { useParams } from "react-router-dom";
 import { moviesService } from "../services/moviesService";
 import { useEffect, useState } from "react";
-import { Navbar } from "../components/Navbar";
-import { Footer } from "../components/Footer";
 
 export const MovieDetail = () => {
   const { id } = useParams();
