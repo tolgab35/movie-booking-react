@@ -1,10 +1,12 @@
 import { useParams } from "react-router-dom";
 import { moviesService } from "../services/moviesService";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const SessionSelection = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     moviesService.getMovieDetails(id).then(setMovie);
@@ -45,9 +47,9 @@ export const SessionSelection = () => {
               <div className="flex flex-wrap gap-3">
                 {sessions.today.map((time) => (
                   <button
+                    onClick={() => navigate(`/movie/${id}/session/seat`)}
                     key={time}
                     className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg border border-gray-700 text-gray-200 hover:text-white transition cursor-pointer"
-                    onClick={() => console.log("Seans:", time)}
                   >
                     {time}
                   </button>
@@ -60,6 +62,7 @@ export const SessionSelection = () => {
               <div className="flex flex-wrap gap-3">
                 {sessions.tomorrow.map((time) => (
                   <button
+                    onClick={() => navigate(`/movie/${id}/session/seat`)}
                     key={time}
                     className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg border border-gray-700 text-gray-200 hover:text-white transition cursor-pointer"
                   >

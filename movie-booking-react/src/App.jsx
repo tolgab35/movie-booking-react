@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { MovieDetail } from "./pages/MovieDetail";
 import { SessionSelection } from "./pages/SessionSelection";
+import { SeatSelection } from "./pages/SeatSelection";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/movie/:id" element={<MovieDetail />} />
           <Route path="/movie/:id/session" element={<SessionSelection />} />
+          <Route path="/movie/:id/session/seat" element={<SeatSelection />} />
         </Routes>
       </div>
       <Footer className="mt-auto" />
